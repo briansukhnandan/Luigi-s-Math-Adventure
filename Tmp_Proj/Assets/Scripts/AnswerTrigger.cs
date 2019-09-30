@@ -13,15 +13,15 @@ public class AnswerTrigger : MonoBehaviour
     public bool answerPicked = false;
 
     // Values for the doors to be overwritten.
-    int door1 = 0;
-    int door2 = 0;
-    int door3 = 0;
+    public int door1 = 0;
+    public int door2 = 0;
+    public int door3 = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         QTrigger = QBox.GetComponent<QuestionTrigger>();
-
+        AnswerText.enabled = false;
         // Debug.Log(QTrigger.signAnswer);
         
     }
@@ -33,8 +33,10 @@ public class AnswerTrigger : MonoBehaviour
 
             int[] possibleChoices = {
                 (2 * QTrigger.signAnswer) + 3,
+                (-1 * QTrigger.signAnswer) + 2,
+                (3 * QTrigger.signAnswer) + 1,
                 QTrigger.signAnswer,
-                (4 * QTrigger.signAnswer) - 10,
+                (7 * QTrigger.signAnswer) - 5,
             };
 
             // TODO (Picking answers)
@@ -44,9 +46,10 @@ public class AnswerTrigger : MonoBehaviour
             // For reference: There are 3 doors per level.
 
             AnswerText.text = doorInitializer(possibleChoices, door1, door2, door3);
-            
+            AnswerText.enabled = true;
 
             // Debug.Log("QTrigger: "+QTrigger.signAnswer);
+            Destroy(this.gameObject);
         }
         
     } 
@@ -56,7 +59,7 @@ public class AnswerTrigger : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Debug.Log("Player touched Ans-Block");
-            
+            // AnswerText.enabled = true;
         }
 
     }
@@ -72,11 +75,14 @@ public class AnswerTrigger : MonoBehaviour
             switch (i) {
                 case 0:
 
+                    r = Random.Range(0, x.Length);
+
                     // If the answer picked for the first door is the correct one.
                     // set answerPicked to true.
-                    a = r;
+                    a = x[r];
 
                     if (a == QTrigger.signAnswer) answerPicked = true;
+                    break;
 
                 case 1:
 
@@ -86,27 +92,59 @@ public class AnswerTrigger : MonoBehaviour
                     // If the answer picked for the second door is the correct answer
                     // and the answer was picked already for a previous door.
                     // Make a new random number and set b = to the door's value.
+                    // If not, this means the rand int is the correct ans and
+                    // the correct answer was not yet placed. Set b to this value.
 
-                    if ((r == QTrigger.signAnswer) && (answerPicked)) {
-                        r = Random.Range(0, x.Length);
-                        b = r;
-                    }
+                    if ((r == QTrigger.signAnswer)) {
+                        if (answerPicked) {
+                            r = Random.Range(0, x.Length);
+                            if (r == QTrigger.signAnswer) r = Random.Range(0, x.Length); 
+                            b = x[r];
+                        }
+                        else {
 
-                    else if () {
+                            b = x[r];
+                            answerPicked = true;
 
+                        }
                         
-
                     }
+                    else {
+                        b = x[r];
+                    }
+                    break;
 
-
+                // If the answer was not yet picked, set c to the answer.
+                // Else, make a new random int and set c to the value at the index.
                 case 2:
+
+                    if (!answerPicked) {
+                        c = QTrigger.signAnswer;
+                    }
+                    else {
+                        r = Random.Range(0, x.Length);
+                        if (r == QTrigger.signAnswer) r = Random.Range(0, x.Length);                
+                        c = x[r];
+                    }
+                    break;
+
+                default:
+                    Debug.Log("Reached default block.");
+                    break;
+
 
             }
 
         }
 
+        string final = "Top Door: "+a.ToString()+"\n"+
+                       "Middle Door: "+b.ToString()+"\n"+
+                       "Bottom Door: "+c.ToString();
 
+        this.door1 = a;
+        this.door2 = b;
+        this.door3 = c;
 
-        return "0";
+        return final;
     }
 }

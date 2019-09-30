@@ -21,6 +21,7 @@ public class QuestionTrigger : MonoBehaviour
         mapOfQuestions.Add("2x+5=17, solve for X:", 6);
         mapOfQuestions.Add("Integrate: 2x+5, from 2 to 3:", 10);
         mapOfQuestions.Add("For (x^2 - 10x + 25), what is the value of X?", 5);
+        mapOfQuestions.Add("What is 2+2?", 4);
         /* ------------------------------------------------ */
 
         // Debug.Log(mapOfQuestions.Count);
