@@ -7797,6 +7797,7 @@ GameObject:
   - component: {fileID: 322107103}
   - component: {fileID: 322107104}
   - component: {fileID: 322107105}
+  - component: {fileID: 322107106}
   m_Layer: 0
   m_Name: Bot Door
   m_TagString: question_block
@@ -7893,6 +7894,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.66}
   m_EdgeRadius: 0
+--- !u!114 &322107106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322107102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7777b73e8b7ed88b09955d76f8082d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnswerBox: {fileID: 1264139050}
+  answerKey: 0
+  topDoor: 0
+  midDoor: 0
+  botDoor: 1
+  topDoorValue: 0
+  midDoorValue: 0
+  botDoorValue: 0
 --- !u!1 &379022446
 GameObject:
   m_ObjectHideFlags: 0
@@ -8063,6 +8084,93 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
+  m_CullTransparentMesh: 0
+--- !u!1 &552131613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552131614}
+  - component: {fileID: 552131616}
+  - component: {fileID: 552131615}
+  m_Layer: 5
+  m_Name: Peach_Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &552131614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552131613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1163309860}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.3, y: -181.7}
+  m_SizeDelta: {x: 641.5, y: 119.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &552131615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552131613}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Peach: Oh, Hello Luigi!
+
+    You see that red square over there? Touching it will make a problem appear on
+
+    the screen. That Blue block is a key that will always be attached to the red one.
+
+    Try and make your way to the section of the level which has the correct answer
+
+    to the question! '
+--- !u!222 &552131616
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552131613}
   m_CullTransparentMesh: 0
 --- !u!1 &592329938
 GameObject:
@@ -8469,6 +8577,7 @@ RectTransform:
   m_Children:
   - {fileID: 1121563181}
   - {fileID: 1510452896}
+  - {fileID: 552131614}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8577,6 +8686,9 @@ MonoBehaviour:
   door1: 0
   door2: 0
   door3: 0
+  topDoor: {fileID: 1286936779}
+  middleDoor: {fileID: 1905809908}
+  bottomDoor: {fileID: 322107102}
 --- !u!61 &1264139054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8614,6 +8726,7 @@ GameObject:
   - component: {fileID: 1286936780}
   - component: {fileID: 1286936781}
   - component: {fileID: 1286936782}
+  - component: {fileID: 1286936783}
   m_Layer: 0
   m_Name: Top Door
   m_TagString: question_block
@@ -8710,6 +8823,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.66}
   m_EdgeRadius: 0
+--- !u!114 &1286936783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286936779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7777b73e8b7ed88b09955d76f8082d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnswerBox: {fileID: 1264139050}
+  answerKey: 0
+  topDoor: 1
+  midDoor: 0
+  botDoor: 0
+  topDoorValue: 0
+  midDoorValue: 0
+  botDoorValue: 0
+--- !u!1 &1380607075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380607076}
+  m_Layer: 0
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380607076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380607075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 718.41565, y: 123.3347, z: -595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1685832483}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510452895
 GameObject:
   m_ObjectHideFlags: 0
@@ -8824,6 +8988,127 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1685832481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685832483}
+  - component: {fileID: 1685832482}
+  - component: {fileID: 1685832484}
+  - component: {fileID: 1685832485}
+  m_Layer: 0
+  m_Name: Peach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1685832482
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685832481}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -740287489
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: dd3f69e38e7cec718b07c29ba8c2cc2c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.47, y: 0.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1685832483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685832481}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -719.9, y: -123.45, z: 895.2401}
+  m_LocalScale: {x: 2.8566582, y: 3.5114233, z: 3.7658963}
+  m_Children: []
+  m_Father: {fileID: 1380607076}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685832484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685832481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d4664a7a749183ddb5f771eeda99ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peachText: {fileID: 552131615}
+--- !u!61 &1685832485
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685832481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0064250976, y: -0.022650488}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.47, y: 0.48}
+    newSize: {x: 0.47, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.37148198, y: 0.43469906}
+  m_EdgeRadius: 0
 --- !u!1 &1834804855
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,8 +9123,8 @@ GameObject:
   - component: {fileID: 1834804858}
   - component: {fileID: 1834804859}
   - component: {fileID: 1834804861}
-  - component: {fileID: 1834804860}
   - component: {fileID: 1834804863}
+  - component: {fileID: 1834804860}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8929,6 +9214,7 @@ MonoBehaviour:
   jumpState: 0
   runSpeed: 85
   avgSpeed: 10
+  animator: {fileID: 1834804863}
 --- !u!61 &1834804859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9054,6 +9340,7 @@ GameObject:
   - component: {fileID: 1905809909}
   - component: {fileID: 1905809910}
   - component: {fileID: 1905809911}
+  - component: {fileID: 1905809912}
   m_Layer: 0
   m_Name: Mid Door
   m_TagString: question_block
@@ -9150,6 +9437,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.66}
   m_EdgeRadius: 0
+--- !u!114 &1905809912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905809908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7777b73e8b7ed88b09955d76f8082d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnswerBox: {fileID: 1264139050}
+  answerKey: 0
+  topDoor: 0
+  midDoor: 1
+  botDoor: 0
+  topDoorValue: 0
+  midDoorValue: 0
+  botDoorValue: 0
 --- !u!1 &1985693529
 GameObject:
   m_ObjectHideFlags: 0

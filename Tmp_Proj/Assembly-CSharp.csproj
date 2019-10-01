@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\NextLevelDoorTrigger.cs" />
+     <Compile Include="Assets\Scripts\PeachScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\QuestionTrigger.cs" />
  <Reference Include="Unity.Timeline.Editor">
