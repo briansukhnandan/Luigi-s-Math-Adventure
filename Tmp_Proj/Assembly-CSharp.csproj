@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\AnswerTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\DeathTriggerScript.cs" />
+     <Compile Include="Assets\Scripts\GoombaScript.cs" />
      <Compile Include="Assets\Scripts\NextLevelDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\PeachScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

@@ -158,6 +158,10 @@ public class AnswerTrigger : MonoBehaviour
             }
 
         }
+        
+        // 2 checks to ensure none of the door values are the same.
+        if ((c == a) || (c == b)) c-=2;
+        if (b == a) b+=3;
 
         string final = "Top Door: "+a.ToString()+"\n"+
                        "Middle Door: "+b.ToString()+"\n"+

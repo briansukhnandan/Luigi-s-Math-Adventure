@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - question_block
+  - Goomba_Bound
+  - Enemy
   layers:
   - Default
   - TransparentFX
