@@ -11,6 +11,7 @@ public class NextLevelDoorTrigger : MonoBehaviour
     private AnswerTrigger Answers;
 
     private Scene scene;
+    //public Scene nextScene;
 
     // Tick the corresponding box in the Unity Editor
     public bool topDoor;
@@ -43,6 +44,7 @@ public class NextLevelDoorTrigger : MonoBehaviour
                 // If the value of the top door is our answer.
                 if (topDoorValue == answerKey) {
                     Debug.Log("Correct Answer Selected");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 // Else
                 else {
@@ -57,6 +59,7 @@ public class NextLevelDoorTrigger : MonoBehaviour
                 // If the value of the mid door is our answer.
                 if (midDoorValue == answerKey) {
                     Debug.Log("Correct Answer Selected");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 else {
                     Debug.Log("Incorrect Answer selected");
@@ -68,6 +71,7 @@ public class NextLevelDoorTrigger : MonoBehaviour
                 // If the value of the bot door is our answer.
                 if (botDoorValue == answerKey) {
                     Debug.Log("Correct Answer Selected");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 else {
                     Debug.Log("Incorrect Answer selected");

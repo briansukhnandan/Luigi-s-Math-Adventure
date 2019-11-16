@@ -8,11 +8,13 @@ public class QuestionTrigger : MonoBehaviour
 
     private string signMessage;
     public int signAnswer;
+
     public bool playerActivation = false;
 
     public Text DisplayText = null;
 
     Dictionary<string, int> mapOfQuestions = new Dictionary<string, int>();
+
 
     // Start is called before the first frame update
     void Start()

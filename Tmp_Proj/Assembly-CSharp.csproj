@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\PeachScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\QuestionTrigger.cs" />
+     <Compile Include="Assets\Scripts\VerticalEnemyScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/brian/Documents/Git_Repositories/luigis-math-adventure/Tmp_Proj/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

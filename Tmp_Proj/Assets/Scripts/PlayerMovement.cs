@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController2D controller;
-    public bool jumpState = false;
+    private bool jumpState = false;
     public float runSpeed = 80f;
     public float avgSpeed = 0f;
 
