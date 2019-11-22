@@ -24,6 +24,8 @@ public class GoombaScript : MonoBehaviour
             reverseDirection();
         }
 
+        
+
     }
 
         

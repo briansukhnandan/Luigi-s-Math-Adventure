@@ -7,6 +7,9 @@ TagManager:
   - question_block
   - Goomba_Bound
   - Enemy
+  - med_diff
+  - hard_diff
+  - brutal_diff
   layers:
   - Default
   - TransparentFX

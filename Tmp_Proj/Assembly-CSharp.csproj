@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\GoombaScript.cs" />
      <Compile Include="Assets\Scripts\NextLevelDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\PeachScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerDifficulty.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\QuestionTrigger.cs" />
      <Compile Include="Assets\Scripts\VerticalEnemyScript.cs" />
