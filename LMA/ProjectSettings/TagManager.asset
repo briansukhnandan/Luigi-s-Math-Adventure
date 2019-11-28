@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - question_block
+  - Goomba_Bound
+  - Enemy
+  - med_diff
+  - hard_diff
+  - brutal_diff
+  - Ladder
+  - Circular_Top_Left
+  - Circular_Top_Right
+  - Circular_Bottom_Left
+  - Circular_Bottom_Right
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground Layer
+    uniqueID: 336639641
+    locked: 0
+  - name: Extras
+    uniqueID: 2233675273
+    locked: 0
+  - name: Player
+    uniqueID: 3554679807
+    locked: 0
