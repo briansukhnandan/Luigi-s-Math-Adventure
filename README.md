@@ -1,6 +1,9 @@
 # Luigi's Math Adventure
 An educational game I decided to create in my spare time. 
 
+## Downloading the game
+	- Run 'git clone https://briansukhnandan@bitbucket.org/briansukhnandan/luigis-math-adventure.git' in a Bash shell
+
 ## To run on Windows: 
 	- Navigate to LMA/Windows_Release/ 
 	- Run LMA.exe 
