@@ -900,4 +900,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/2.unity
   - Assets/Scenes/3.unity
   - Assets/Scenes/4.unity
-  playerPath: /home/brian/Documents/Git_Repositories/luigis-math-adventure/LMA/Linux_Release/Launcher.x86_64
+  playerPath: /home/brian/Documents/Git_Repositories/luigis-math-adventure/LMA/Linux_Release/LMA.x86_64
